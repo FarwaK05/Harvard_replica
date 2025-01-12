@@ -1,0 +1,29 @@
+/* Define custom font families using @font-face for consistent typography */
+/* Fonts used here are the same as those on the Harvard University homepage */
+@font-face {
+    font-family: 'Canela Deck Light';
+    src: url('../fonts/CanelaDeck-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canela Deck Medium';
+    src: url('../fonts/CanelaDeck-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canela Deck Regular';
+    src: url('../fonts/CanelaDeck-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Define global color variables for consistent styling */
+:root {
+    --background-color: #f3f4f4;
+    --background-color-dark: #e3e5e5;
+    --primary-color: #a51c30;
+    --secondary-color: rgb(23, 161, 159);
+}

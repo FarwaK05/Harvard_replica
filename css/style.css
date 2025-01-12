@@ -1,0 +1,873 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Canela Deck Regular', serif;
+    background-color: var(--background-color);
+}
+
+h1, h2, h3 ,p {
+    font-family: 'Canela Deck Regular', serif;
+}
+
+
+
+/* Navbar */
+.main-navigation {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+  }
+  
+  .logolink {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+  }
+  
+  .logolink img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logotext {
+    font-family: 'Canela Deck Medium', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .navlinks {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Menu Items */
+  .navmenu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navmenu li {
+    margin-right: 1rem;
+  }
+  
+  .navmenu a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Canela Deck Medium', serif;
+    font-size: 1.1rem;
+  }
+  
+  .navmenu a:hover {
+    color: var(--background-color);
+  }
+  
+  /* Search and Menu Buttons */
+  .navbutton {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 120px;
+    height: 60px;
+    padding: 10px;
+    border-left: 1px solid var(--background-color);
+  }
+  
+  .navbutton p {
+    font-size: 1.2rem;
+  }
+  
+  .navbutton:hover {
+    background-color: var(--background-color);
+    color: black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  .menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+  }
+    
+
+/* Hero Section  */
+
+.herosection {
+    position: relative;
+    background-image: url('../images/herosection.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  var(--background-color);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-family: 'Canela Deck', serif;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* Gudie Section */
+
+.guide-section {
+    padding: 4rem 2rem;
+}
+
+.guide-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guide-image {
+    flex: 2;
+}
+
+.guide-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-content {
+    flex: 1;
+}
+
+.guide-content h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.guide-content h2 {
+    font-family: 'Canela Deck Regular', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.guide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.guide-content .learn-more {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color:var(--secondary-color);
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.guide-content .learn-more:hover {
+    color: #000;
+}
+
+
+/* quoteSection */
+
+.quote-section {
+    padding: 3rem 2rem;
+    background-color: var(--background-color);
+}
+
+.quote-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quote-content {
+    flex: 1;
+}
+
+.quote-symbol img {
+    width: 100px;
+    font-size: 1.2rem;
+    height: auto;
+    position: relative;
+    top:50px;
+    margin-bottom: 1rem;
+}
+
+.quote-text {
+    font-family: 'Canela Deck Medium', serif;
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.quote-author {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.quote-author strong {
+    font-size: 1.1rem;
+}
+
+.quote-image {
+    flex: 1;
+}
+
+.quote-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Audio Play */
+.audio-player-section {
+    padding: 10px;
+}
+
+.audio-container {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.audio-thumbnail {
+    display: flex;
+}
+
+.audio-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+}
+
+.audio-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.audio-title {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.audio-episode {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.play-button {
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.play-button svg {
+    fill: #fff;
+}
+
+.audio-timeline {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.audio-timeline .current-time,
+.audio-timeline .total-time {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.audio-timeline .audio-waveform {
+    flex: 1;
+    height: 4px;
+    background: linear-gradient(to right, #ffc107 30%, #ddd 30%);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Free Courses */
+
+.freecourses {
+    background-color: var(--background-color);
+    padding: 2rem 10rem;
+    margin: 2rem 0rem;
+  }
+  
+  .freecourses-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .freecourses-header h2 {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .freecourses-header p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .explore-link {
+    font-family: 'Canela Deck Medium', sans-serif;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .course-card {
+    background: var(--background-color-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .course-card img {
+    transition: all 0.3s ease;
+    width: 100%;
+    height: auto;
+  }
+  
+  .course-content {
+    padding: 4rem 1rem;
+  }
+  
+  .course-content h3 {
+    font-family: 'Canela Deck light', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .course-content p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .status {
+    font-family: 'Canela Deck Medium', sans-serif;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+  }
+
+  .course-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .course-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background: #fff;
+  }
+
+  /* mental Health */
+  .mental-health {
+    display: flex;
+    padding: 2rem 10rem;
+    flex-wrap: wrap;
+    background-color: var(--background-color);
+    gap: 2rem;
+  }
+  
+  .mental-health-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .mental-health-content h2 {
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mental-health-content p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mental-health-content a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .mental-health-content img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .mindfulness-steps {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .mindfulness-steps h3 {
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step {
+    margin-bottom: 1.5rem;
+  }
+  
+  .step h4 {
+    font-family: 'Canela Deck light', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .step p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.1rem;
+  }
+  
+
+/* Book Recommendations Section */
+.book-recommendations {
+    background-color: var(--background-color);
+    padding: 2rem 10rem;
+    margin: 2rem 0rem;
+  }
+  
+  .book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .book-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .book-header .explore-all-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .book-card {
+    position: relative;
+    overflow: hidden;
+    max-width:400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .book-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .book-card:hover .book-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .book-overlay h3 {
+    font-family: 'Canela Deck light', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .book-overlay a {
+    border: 1px solid black;
+    width:max-content;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+
+/* Physical Health Section */
+.physical-health {
+    display: flex;
+    padding: 2rem 10rem;
+    margin: 2rem 0rem;
+    flex-wrap: wrap;
+    background-color: var(--background-color);
+    gap: 2rem;
+  }
+  
+  .physical-health-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .physical-health-content h2 {
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .physical-health-content p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .physical-health-content a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .physical-health-content img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .exercise-options {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .exercise-options h3 {
+    font-family: 'Canela Deck Medium', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .option {
+    margin-bottom: 1.5rem;
+  }
+  
+  .option h4 {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .option p {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .option a {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: black;
+  }
+  
+
+/* Podcast Section */
+
+/* Podcast Section */
+.podcast-section {
+    background-color: var(--background-color);
+    padding: 2rem 10rem;
+  }
+  
+  .podcast-header {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  
+  .podcast-header h2 {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .podcast-header p {
+    font-family: 'Canela Deck Light', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .podcast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .podcast-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .podcast-info {
+    flex: 2;
+  }
+  
+  .podcast-info h3 {
+    font-family: 'Canela Deck Light', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .podcast-info .source {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .podcast-info .description {
+    font-family: 'Canela Deck Regular', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .podcast-image {
+    flex: 1;
+    max-width: 150px;
+  }
+  
+  .podcast-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  hr {
+    border: 1px dashed black;
+    
+  }
+
+/* Footer Section */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 10rem;
+  }
+  
+  /* Footer Top */
+  .footer-top {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-column {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex: 1;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column ul li a {
+    color: var(--background-color);
+    font-weight:300;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-copyright {
+    flex: 1;
+    font-size: 0.8rem;
+    color: #ccc;
+    text-align: left;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    max-width: 250px;
+  }
+  
+  .footer-social {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-social a {
+    margin: 0 0.5rem;
+  }
+  
+  .footer-social img {
+    width: 50px;
+    height: 50px;
+  }
+  
